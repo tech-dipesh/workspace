@@ -1,0 +1,14 @@
+[user]
+	email = dipeshsharmagautam@outlook.com
+	name = Dipesh Sharma
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

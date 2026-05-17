@@ -1,0 +1,146 @@
+# ============================================
+# OS generated files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================
+# Editor files
+# ============================================
+# VS Code
+.vscode/
+*.code-workspace
+*.code-search
+
+# Neovim / Vim
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+Session.vim
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# IDE files
+# ============================================
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# ============================================
+# Logs and databases
+# ============================================
+*.log
+*.sqlite
+*.db
+*.db-journal
+
+# ============================================
+# Compiled files
+# ============================================
+*.class
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# ============================================
+# Node.js / JavaScript
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ============================================
+# Python
+# ============================================
+*.egg-info/
+*.egg
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# ============================================
+# C / C++
+# ============================================
+*.out
+*.app
+*.exe
+*.ilk
+*.pdb
+*.obj
+*.o
+*.dSYM/
+
+# ============================================
+# Environment & secrets
+# ============================================
+.env
+.env.*
+!.env.example
+!.env.sample
+*.key
+*.pem
+*.crt
+*.cer
+*.pfx
+*.p12
+*.secret
+
+# ============================================
+# Archive files (optional)
+# ============================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ============================================
+# Temporary files
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.cache
+*.swp
+*~
+
+# ============================================
+# Docker
+# ============================================
+.dockerignore
+*.dockerfile
+#
+.env
