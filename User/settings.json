@@ -1,0 +1,240 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "livePreview.notifyOnOpenLooseFile": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "afterDelay",
+  "code-runner.runInTerminal": true,
+  "editor.inlineSuggest.enabled": false,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "zig": "zig run",
+    "code-runner.runInTerminal": true,
+    // this for teh command prompt.
+    // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    // old "cpp": "cd \"$dir\" && g++ \"$fileName\" -o \"$fileNameWithoutExt\" && ./\"$fileNameWithoutExt\"",
+    // Below will work for the  bash command 
+    "cpp": "g++ \"$fileName\" -o \"$fileNameWithoutExt.exe\" && ./\"$fileNameWithoutExt.exe\"",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runghc",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName",
+    "mojo": "mojo run",
+    "erlang": "escript",
+    "spwn": "spwn build",
+    "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+    "gleam": "gleam run -m $fileNameWithoutExt"
+  },
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  //  "emmet.includeLanguages": {
+  //       "html": "html",
+  //       "javascript": "html",
+  //       "php": "html",
+  //       "blade": "html"
+  //   },
+  "emmet.includeLanguages": {
+  "javascript": "javascriptreact",
+  "javascriptreact": "jsx",
+  "typescriptreact": "jsx"
+},
+
+  "explorer.confirmDelete": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "git.confirmSync": false,
+  "github.copilot.enable": {
+    "*": false
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "git.enableSmartCommit": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "sherlock.userId": "caf6071f-8581-4f5a-98e5-69c76c2b2842",
+  "workbench.editor.empty.hint": "hidden",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "chat.commandCenter.enabled": false,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.suggest.enabled": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "leetcode.workspaceFolder": "C:\\Users\\DIPESH\\.leetcode",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "debug.onTaskErrors": "abort",
+  "mdb.mcp.server": "autoStartEnabled",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  // "C_Cpp.intelliSenseEngine": "disabled",
+  // "clangd.path": "c:\\Users\\DIPESH\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\21.1.0\\clangd_21.1.0\\bin\\clangd.exe",
+   "C_Cpp.formatting": "vcFormat",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.formatOnSave": true
+    },
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.formatOnSave": true
+    },
+    "C_Cpp.vcFormat.indent.braces": false,
+  "C_Cpp.vcFormat.indent.caseLabels": true,
+  "C_Cpp.vcFormat.indent.caseContents": true,
+  // "C_Cpp.vcFormat.indent.namespaceContents": true,
+  "C_Cpp.vcFormat.indent.lambdaBracesWhenParameter": true,
+  "C_Cpp.vcFormat.indent.multiLineRelativeTo": "innermostParenthesis",
+  
+  // Space AFTER keywords (for, if, while) but NOT before function parentheses
+  "C_Cpp.vcFormat.space.afterKeywordsInControlFlowStatements": false,
+  "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "ignore",
+  "C_Cpp.vcFormat.space.removeBeforeSemicolon": true,
+  
+  // No space in empty braces
+  "C_Cpp.vcFormat.space.betweenEmptyBraces": false,
+  "C_Cpp.vcFormat.space.betweenEmptyLambdaBrackets": false,
+  "C_Cpp.vcFormat.space.betweenEmptyParameterListParentheses": false,
+  
+  // Don't preserve one-liners - always expand
+  "C_Cpp.vcFormat.wrap.preserveBlocks": "allOneLineScopes",
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.js": "javascript"
+  },
+  "explorer.confirmPasteNative": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": "C:\\WINDOWS\\System32\\cmd.exe",
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "args": [
+        "--login",
+        "-i"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "chat.disableAIFeatures": true,
+  "inlineFold.unfoldedOpacity": 1,
+  "inlineFold.unfoldOnLineSelect": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Dark+",
+  "window.menuBarVisibility": "compact",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+"projectManager.groupList": true,
+"projectManager.projects": [
+  {
+    "name": "Portfolio",
+    "rootPath": "C:\\Users\\DIPESH\\Projects\\Portfolio",
+    "group": "Project"
+  },
+  {
+    "name": "Project Managment Jira",
+    "rootPath": "C:\\Users\\DIPESH\\Projects\\Project Managment Jira",
+    "group": "Project"
+  },
+  {
+    "name": "Ip 2",
+    "rootPath": "C:\\Users\\DIPESH\\Projects\\Ip 2",
+    "group": "Learning"
+  },
+  {
+    "name": "Job Portal",
+    "rootPath": "C:\\Users\\DIPESH\\Projects\\Job Portal",
+    "group": "Project"
+  },
+  {
+    "name": "Frontend Revision",
+    "rootPath": "C:\\Users\\DIPESH\\Projects\\Frontend Revision",
+    "group": "Learning"
+  }
+],
+"workbench.editor.editorActionsLocation": "hidden",
+"workbench.startupEditor": "none",
+"vim.startInInsertMode": true,
+"terminal.integrated.initialHint": false,
+"workbench.activityBar.compact": true,
+"workbench.panel.showLabels": false,
+"workbench.statusBar.visible": false
+}
