@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "packs": {
+    "en": {
+      "languageId": "en",
+      "translationId": "en",
+      "hash": "somehashvalue",
+      "localizedLanguages": []
+    }
+  },
+  "selectedLang": "en"
+}
