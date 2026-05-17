@@ -1,0 +1,148 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{ebfb53c6-6800-4c6d-a181-098e99f3a57d}",
+    "keybindings": 
+    [
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": {},
+        "list": 
+        [
+            {
+                "antialiasingMode": "grayscale",
+                "colorScheme": "GitHub Dark",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "face": "Cascadia Code",
+                    "size": 11
+                },
+                "guid": "{ebfb53c6-6800-4c6d-a181-098e99f3a57d}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash Dev",
+                "opacity": 85,
+                "padding": "8px",
+                "scrollbarState": "visible",
+                "startingDirectory": "~",
+                "suppressApplicationTitle": true,
+                "tabTitle": "git bash",
+                "useAcrylic": true
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt",
+                "opacity": 90
+            },
+            {
+                "guid": "{813bf456-8eb7-5001-beca-3277104f88cd}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Microsoft.WSL"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#0D1117",
+            "black": "#010409",
+            "blue": "#4493F8",
+            "brightBlack": "#6E7681",
+            "brightBlue": "#79C0FF",
+            "brightCyan": "#56D4DD",
+            "brightGreen": "#56D364",
+            "brightPurple": "#D2A8FF",
+            "brightRed": "#FF7B72",
+            "brightWhite": "#F0F3F6",
+            "brightYellow": "#E3B341",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#39C5CF",
+            "foreground": "#E6EDF3",
+            "green": "#3FB950",
+            "name": "GitHub Dark",
+            "purple": "#BC8CFF",
+            "red": "#F85149",
+            "selectionBackground": "#FFFFFF",
+            "white": "#E6EDF3",
+            "yellow": "#D29922"
+        }
+    ],
+    "themes": []
+}
