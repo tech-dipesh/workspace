@@ -45,11 +45,7 @@
   },
   "Add Event Listener": {
     "prefix": ["idjs", "clickjs"],
-    "body": [
-      "$1.addEventListener('click', (e) => {",
-      "  $2",
-      "});"
-    ],
+    "body": ["$1.addEventListener('click', (e) => {", "  $2", "});"],
     "description": "addEventListener click"
   },
   "Express App": {
@@ -117,5 +113,23 @@
       "$2"
     ],
     "description": "Fetch API call"
+  },
+  "Routes Simple": {
+    "prefix": "rscc",
+    "body": [
+      "app.post('$1', async (req: Request, res: Response) => {",
+      "\t$2",
+      "});"
+    ]
+  },
+  "Prisma Import": {
+    "prefix": "ipr",
+    "body": [
+	    "import {PrismaClient} from '../generated/prisma/client'",
+	    "$1"
+    ],
+    "description": "Fetch API call"
   }
+
+
 }

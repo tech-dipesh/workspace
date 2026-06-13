@@ -11,7 +11,7 @@
   },
   "Async Arrow Function": {
     "prefix": "arf",
-    "body": ["const $1 = async ($2) => {", "  $3", "}", "export default $1;"],
+    "body": ["const $1 = async ($2) => {", "  $3", "}", "export { $1};"],
     "description": "Async arrow function with export"
   },
   "Arrow Function Named": {
@@ -84,7 +84,7 @@
   },
   "Async Function": {
     "prefix": "asyncf",
-    "body": ["async function $1($2) {", "  $3", "}"],
+    "body": ["async  ($1)=> {", "  $2", "}"],
     "description": "Async function"
   },
   "Try Catch": {
@@ -117,5 +117,24 @@
       "$2"
     ],
     "description": "Fetch API call"
+  },
+   "Prisma Import": {
+    "prefix": "ipr",
+    "body": [
+	    "import {PrismaClient} from '../generated/prisma/client'",
+	    "$1"
+    ],
+    "description": "Fetch API call"
+  },
+
+ "Router Use": {
+    "prefix": "rimp",
+    "body": [
+	    "$1.$2('$3', (req, res)=>{"
+	    "$4",
+	    "}"
+    ],
+    "description": "Fetch API call"
   }
+
 }

@@ -1,0 +1,17 @@
+{
+  "Console Log": {
+    "prefix": ["!", "html", "html5"],
+    "body": [
+	    ".env",
+	    "NUL",
+	    "node_modules/",
+	    "package-lock.json",
+	    "pnpm-lock.yml",
+	    "*.swp",
+	    ".vscode",
+	    ".git",
+	    "$1"
+   ],
+    "description": "HTML5 Boilerplate"
+  }
+}

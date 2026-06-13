@@ -8,7 +8,8 @@
       { "language": "javascriptreact", "path": "./javascriptreact.json" },
       { "language": "typescriptreact", "path": "./typescriptreact.json" },
       { "language": "cpp",             "path": "./cpp.json" },
-      { "language": "c",               "path": "./cpp.json" }
+      { "language": "c",               "path": "./cpp.json" },
+      { "language": ".gitignore",               "path": "./.gitignore.json" }
     ]
   }
 }
