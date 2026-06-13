@@ -1,6 +1,13 @@
 {
   "extras": [
-
+    "lazyvim.plugins.extras.editor.dial",
+    "lazyvim.plugins.extras.lang.ember",
+    "lazyvim.plugins.extras.lang.git",
+    "lazyvim.plugins.extras.lang.gleam",
+    "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.prisma",
+    "lazyvim.plugins.extras.lang.sql",
+    "lazyvim.plugins.extras.lang.typescript.tsgo"
   ],
   "install_version": 8,
   "news": {

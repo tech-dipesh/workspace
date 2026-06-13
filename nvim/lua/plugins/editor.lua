@@ -78,7 +78,7 @@ return {
 
         follow_current_file = {
           enabled        = true,   -- highlight file in tree when buffer changes
-          leave_dirs_open = true,  -- keep parent dirs expanded
+          leave_dirs_open = false,  -- keep parent dirs expanded
         },
 
         group_empty_dirs = true,
@@ -94,6 +94,7 @@ return {
           show_hidden_count = true,   -- show count badge: "node_modules (847)"
 
           hide_dotfiles    = false,   -- SHOW: .env, .gitignore, etc.
+	  respect_gitignore = false,
           hide_gitignored  = false,   -- SHOW: gitignored files
           hide_hidden      = false,   -- SHOW: Windows hidden-attribute files
 
@@ -107,7 +108,6 @@ return {
 
           -- Always visible regardless of other rules
           always_show = {
-            ".env",
             ".env.local",
             ".env.development",
             ".env.production",
@@ -178,7 +178,7 @@ return {
       },
 
       buffers = {
-        follow_current_file = { enabled = true },
+        follow_current_file = { enabled = false },
         show_unloaded       = true,
         window = {
           mappings = { ["bd"] = "buffer_delete" },

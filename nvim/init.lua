@@ -9,4 +9,10 @@ vim.g.loaded_ruby_provider   = 0
 vim.g.loaded_perl_provider   = 0
 vim.g.loaded_python3_provider = 0
 
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+vim.opt.textwidth = 80
+
+-- Wraps the word under the cursor with curly braces (no spaces)
 require("config.lazy")

@@ -18,6 +18,7 @@ return {
     opts = {
       ensure_installed = {
         -- LSP servers
+	"typescript-language-server",
         "lua-language-server",
         "json-lsp",
         "html-lsp",

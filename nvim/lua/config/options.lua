@@ -191,3 +191,8 @@ if vim.g.neovide then
     vim.notify("Font size: 12 (reset)", vim.log.levels.INFO, { title = "Neovide", timeout = 800 })
   end, { desc = "Neovide: reset zoom" })
 end
+
+
+
+-- Cursor shapes: block in Normal, vertical bar in Insert
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"

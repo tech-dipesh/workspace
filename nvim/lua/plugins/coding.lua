@@ -72,7 +72,7 @@ return {
       { "<leader>nd", function() require("package-info").delete()         end, ft="json", desc = "npm: Delete package" },
     },
     opts = {
-      colors = {
+      highlights = {
         up_to_date = "#3C4048",
         outdated   = "#d19a66",
       },
@@ -129,6 +129,21 @@ return {
         TEST   = { icon = " ", color = "test",    alt = { "TESTING","PASSED","FAILED" } },
         DEBUG  = { icon = " ", color = "error" },
         REVIEW = { icon = " ", color = "warning" },
+      },
+    },
+  },
+  -- Add this block at the bottom:
+  {
+    "nvim-mini/mini.surround",
+    opts = {
+      mappings = {
+        add = "ys",           -- Add surrounding in Normal/Visual modes
+        delete = "ds",        -- Delete surrounding
+        find = "",            -- Disable unnecessary defaults
+        find_left = "",
+        highlight = "",
+        replace = "cs",       -- Change surrounding
+        update_n_lines = "",
       },
     },
   },
