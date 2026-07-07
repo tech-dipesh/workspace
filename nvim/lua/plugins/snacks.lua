@@ -25,7 +25,7 @@ return {
       explorer = { enabled = false },
 
       -- ── Dashboard ─────────────────────────────────────────
-      -- Shows recent git commits + project list on start screen
+      -- Shows only header, keys, and projects (no recent commits)
       dashboard = {
         enabled = true,
         preset  = {
@@ -51,21 +51,8 @@ return {
         sections = {
           { section = "header" },
           { section = "keys",  gap = 1, padding = 1 },
-          -- Recent projects (right pane)
-          { pane = 2, section = "projects", padding = 1 },
-          -- Last 8 git commits (right pane)
-          {
-            pane    = 2,
-            icon    = " ",
-            title   = "Recent Commits",
-            section = "terminal",
-            enabled = vim.fn.executable("git") == 1,
-            cmd     = "git --no-pager log --oneline --decorate --abbrev-commit --color=always -8 2>NUL || echo Not a git repo",
-            height  = 8,
-            padding = 1,
-            ttl     = 300,
-            indent  = 3,
-          },
+          -- Projects pane (right side) – now takes the full right column
+          { pane = 2, section = "projects", padding = 2 },
           { section = "startup" },
         },
       },

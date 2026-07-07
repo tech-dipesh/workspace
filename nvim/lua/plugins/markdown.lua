@@ -36,7 +36,7 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     opts = {
-      enabled          = true,
+      enabled          = false,
       render_modes     = { "n", "c" },   -- render in normal + command mode
       anti_conceal     = { enabled = true },
       heading = {

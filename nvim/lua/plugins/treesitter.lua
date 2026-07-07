@@ -63,6 +63,9 @@ return {
             ["ai"] = { query = "@conditional.outer", desc = "outer if"       },
             ["al"] = { query = "@loop.outer",        desc = "outer loop"     },
             ["il"] = { query = "@loop.inner",        desc = "inner loop"     },
+	  -- NEW: Variable declaration text objects
+	      ["av"] = { query = "@variable.outer", desc = "around variable" },
+	      ["iv"] = { query = "@variable.inner", desc = "inside variable" }
           },
         },
         move = {

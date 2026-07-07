@@ -105,6 +105,7 @@ return {
             "thumbs.db",
             "NUL"
           },
+	always_show_by_pattern = { "%.md$" },
 
           -- Always visible regardless of other rules
           always_show = {
@@ -129,6 +130,7 @@ return {
             ".vscode",
             ".editorconfig",
             ".babelrc",
+	    "*.md",
           },
 
           -- Never show these (even if always_show matches)

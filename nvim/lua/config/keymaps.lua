@@ -488,3 +488,32 @@ vim.keymap.set({ "n", "v" }, "<leader>wb", function()
     vim.fn.cursor(0, word_start + #left)
   end
 end, { desc = "Wrap word/selection with dynamic bracket" })
+
+
+
+-- Compile and run current Java file
+map("n", "<leader>rj", function()
+  local file = vim.fn.expand("%:t")
+  local root = vim.fn.expand("%:r")
+  local ext = vim.fn.expand("%:e")
+
+  if ext ~= "java" then
+    vim.notify("Not a Java file!", vim.log.levels.WARN)
+    return
+  end
+
+  vim.cmd("write")
+  local cmd = string.format('javac "%s" && java "%s"', file, root)
+  Snacks.terminal(cmd, {
+    win = { position = "bottom", height = 0.4 },
+    cwd = vim.fn.expand("%:p:h"),
+  })
+end, { desc = "Java: Compile & Run" })
+
+
+
+--  force Delete all Bufferr
+vim.keymap.set("n", "<leader>ba", ":%bd!<CR>", { desc = "Force Close All Buffers & Terminals" })
+
+-- Force Quite
+vim.keymap.set("n", "<leader>wq", "<cmd>wa<cr><cmd>qa<cr>")
