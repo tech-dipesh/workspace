@@ -15,6 +15,8 @@ mkdir -p ~/old-config-backup
 
 [ -f "git/.gitconfig" ] && cp git/.gitconfig "$HOME/"
 
+# FIX: Create the parent .config folder structure first
+mkdir -p "$HOME/.config"
 [ -d "nvim" ] && cp -r nvim "$NVIM_CONFIG_DIR"
 
 mkdir -p "$VSCODE_CONFIG_DIR"
@@ -29,3 +31,4 @@ if [ -f "Vs_Code/extensions.txt" ] && command -v code &> /dev/null; then
 fi
 
 echo "✅ Linux setup complete!"
+

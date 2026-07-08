@@ -30,9 +30,10 @@ alias .2="cd ../../"
 alias .3="cd ../../../"
 alias ~="cd ~"
 alias pr="cd ~/Downloads/Project"
-alias st="cd ~/Downloads/'Study Material'/'Frontend Revision'/"
+alias job="cd ~/Downloads/Project/Job\ Portal"
+alias st="cd ~/Downloads/'Study Material'/"
 alias github="cd D:/Desktop/github"
-alias lua="cd ~/AppData/Local/nvim/lua"
+alias lua="cd ~/AppData/Local/nvim"
 alias gssoc="cd D:Desktop/github/26_gssoc"
 alias oa="cd ~/'Downloads/Study Material/Online_Assessments'"
 
@@ -69,7 +70,7 @@ gc() {
 #  Package & dev aliases
 # ──────────────────────────────────────────────────────────────────────────────
 
-alias vite="npm create vite@latest . -- --template react --rolldown --immediate"
+alias vite="pn create vite@latest . -- --template react --rolldown --immediate"
 alias run="npm run dev"
 alias start="npm start"
 alias dev='npm run dev'
@@ -86,10 +87,10 @@ alias nrf="npm run frontend"
 # ──────────────────────────────────────────────────────────────────────────────
 
 alias dps="docker ps -a"
-dex(){
+dex() {
   docker exec -it $1
 }
-db(){
+db() {
   docker build -t $1 .
 }
 alias dcu="docker-compose up -d"
@@ -113,13 +114,13 @@ alias ws='warp-cli status'
 #  Various utilities
 # ──────────────────────────────────────────────────────────────────────────────
 
-alias nv='/c/Program\ Files/Neovide/neovide.exe'
+alias nv='/c/Program\ Files/Neovim/bin/nvim.exe'
 alias bash="vim  ~/.bashrc"
 alias fast="speedtest"
 alias count="find . -type f | grep -c \"^\""
 alias cpen="cp .env.example .env"
-alias tree='cmd //c tree //F'
-alias catall="rg . -uu --no-messages --glob '!node_modules/*' --glob '!**/.git/*' --glob '!package-lock.json' --glob '!pnpm-lock.yaml' --glob '!*.md'"
+alias tree='tree -F -I "node_modules|package-lock.json|pnpm-lock.yaml"'
+alias catall="rg . -uu --no-messages --glob '!**/node_modules/**' --glob '!**/.git/**' --glob '!**/package-lock.json' --glob '!**/pnpm-lock.yaml' --glob '!**/*.md' --glob '!**/*.pdf' --glob '!**/*.{png,jpg,jpeg,gif,webp,ico,svg}' --glob '!**/*.{mp4,mov,avi,mkv,webm,flv}'"
 alias catall1='find . -type f ! -path "*/.git/*" ! -path "*/node_modules/*" ! -name "*.png" ! -name "*.jpg" ! -name "*.jpeg" ! -name "*.pdf" ! -name "*package-lock*" ! -name "*pnpm-lock*" -exec cat {} + 2>/dev/null'
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -134,11 +135,10 @@ hg() {
   history | grep "$1"
 }
 
-finda(){
-  rg -n "$1"
+finda() {
+  rg -n --glob='!node_modules/' --glob='!package-lock.json' --glob='!pnpm-lock.yaml' --glob='!yarn.lock' "$1"
 }
-
-gex(){
+gex() {
   grep -rnw . --exclude-dir={$1}
 }
 
@@ -157,7 +157,7 @@ watch() {
 
 # robust Fuzzy Matcher – uses fd if available, otherwise find
 ff() {
-  if command -v fd &> /dev/null; then
+  if command -v fd &>/dev/null; then
     fd --type f --color=always \
       --exclude "*.png" \
       --exclude "*.jpg" \
@@ -190,3 +190,28 @@ ff() {
       2>/dev/null | grep -i "$1" | fzf
   fi
 }
+export PATH="$PATH:/d/Documents/platform-tools"
+
+alias nodemon="pnx nodemon"
+alias render='/c/cli-tools/render.exe'
+alias java5='cd "/c/Users/DIPESH/Downloads/Study Material/Java-5th-Sem"'
+javarun() {
+  local file="${1%.java}" # remove .java if present
+  javac "$file.java" && java "$file"
+}
+crun() {
+  local file="${1%.cpp}" # remove .java if present
+  g++ "$file.cpp" -o a && ./a.exe
+}
+alias redis-cli='/c/Program\ Files/Memurai/memurai-cli.exe'
+alias backend='cd ~/Downloads/Study\ Material/Backend\ Revision'
+alias frontend='cd ~/Downloads/Study\ Material/Frontend\ Revision'
+alias nextjs="pn create next-app@latest"
+alias vim="nvim"
+alias py='py -3.11'
+alias python='py -3.11'
+export PNPM_APPROVE_BUILDS=true
+
+alias approve="pn approve-builds"
+alias vercel="pnx vercel"
+alias plogin="psql -U postgres -h 127.0.0.1"
