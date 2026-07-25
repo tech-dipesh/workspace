@@ -1,0 +1,140 @@
+{
+  "Console Log": {
+    "prefix": ["cc", "clg", "log"],
+    "body": "console.log($1);",
+    "description": "console.log()"
+  },
+  "Anonymous Arrow Function": {
+    "prefix": "af",
+    "body": ["() => {", "  $1", "}"],
+    "description": "Arrow function"
+  },
+  "Async Arrow Function": {
+    "prefix": "arf",
+    "body": ["const $1 = async ($2) => {", "  $3", "}", "export { $1};"],
+    "description": "Async arrow function with export"
+  },
+  "Arrow Function Named": {
+    "prefix": "arrow",
+    "body": ["const $1 = ($2) => {", "  $3", "}"],
+    "description": "Named arrow function"
+  },
+  "Random Array": {
+    "prefix": ["jsa", "rcc"],
+    "body": "const arr = [2, 9, 10, 1, 29, 30, 18, 50, 5, 21, 25, 30, 14, 35];",
+    "description": "Random array"
+  },
+  "Sample Object": {
+    "prefix": "objjs",
+    "body": [
+      "const $1 = {",
+      "\tname: 'Dipesh Sharma',",
+      "\thometown: 'Baglunge Thito',",
+      "\tpassion: 'Software Development',",
+      "\tage: 20,",
+      "\tisNepali: true,",
+      "};",
+      "$2"
+    ],
+    "description": "Sample object"
+  },
+  "Get Element By Id": {
+    "prefix": "getid",
+    "body": "const $1 = document.getElementById('$2');",
+    "description": "getElementById"
+  },
+  "Add Event Listener": {
+    "prefix": ["idjs", "clickjs"],
+    "body": [
+      "$1.addEventListener('click', (e) => {",
+      "\t$2",
+      "});"
+    ],
+    "description": "addEventListener click"
+  },
+  "Express App": {
+    "prefix": "ecc",
+    "body": [
+      "import express from 'express';",
+      "const app = express();",
+      "const port = process.env.PORT || 3000;",
+      "",
+      "app.use(express.json());",
+      "",
+      "app.get('/', (req, res) => {",
+      "\t$1",
+      "\tres.status(200).json({ message: 'Success' });",
+      "});",
+      "",
+      "app.listen(port, () => {",
+      "\tconsole.log(`App is listening on port ${port}`);",
+      "});"
+    ],
+    "description": "Express app boilerplate"
+  },
+  "JSON Response": {
+    "prefix": "resj",
+    "body": "return res.status($1).json({ message: $2 });",
+    "description": "Express JSON response"
+  },
+  "Import Statement": {
+    "prefix": "imp",
+    "body": "import $2 from '$1';",
+    "description": "Import statement"
+  },
+  "Async Function": {
+    "prefix": "asyncf",
+    "body": ["async  ($1)=> {", "  $2", "}"],
+    "description": "Async function"
+  },
+  "Try Catch": {
+    "prefix": "tc",
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch (error) {",
+      "\tconsole.error(error);",
+      "\t$2",
+      "}"
+    ],
+    "description": "Try catch block"
+  },
+  "For Loop": {
+    "prefix": "forl",
+    "body": ["for (let i = 0; i < $1; i++) {", "  $2", "}"],
+    "description": "For loop"
+  },
+  "forEach": {
+    "prefix": "fore",
+    "body": ["$1.forEach(($2) => {", "  $3", "});"],
+    "description": "forEach loop"
+  },
+  "Fetch API": {
+    "prefix": "fetch",
+    "body": [
+      "const response = await fetch('$1');",
+      "const data = await response.json();",
+      "$2"
+    ],
+    "description": "Fetch API call"
+  },
+   "Prisma Import": {
+    "prefix": "ipr",
+    "body": [
+	    "import {PrismaClient} from '../generated/prisma/client'",
+	    "$1"
+    ],
+    "description": "Fetch API call"
+  },
+
+ "Router Use": {
+    "prefix": "rimp",
+    "body": [
+	    "$1.$2('$3', (req, res)=>{",
+	    "$4",
+	    "}"
+    ],
+    "description": "Fetch API call"
+  }
+
+}

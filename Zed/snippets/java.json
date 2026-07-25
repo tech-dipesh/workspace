@@ -1,0 +1,42 @@
+{  
+  "Java Class Template": {
+    "prefix": ["javaclass", "cc"],
+    "body": [
+      "import java.util.*;",
+      "class $TM_FILENAME_BASE {",
+      "\t\t\tpublic static void main(String[] args) {",
+      "\t\t\t$1",
+      "\t\t}",
+      "}"
+    ],
+    "description": "Java main class"
+  },
+  "Java Scanner Input": {
+    "prefix": ["scan", "in"],
+    "body": [
+      "Scanner sc = new Scanner(System.in);",
+      "$1 sc = sc.next();"
+    ],
+    "description": "Scanner input"
+  },
+  "Java For Loop": {
+    "prefix": ["forj", "lc"],
+    "body": [
+      "for (int i = 0; i < $1; i++) {",
+      "\t\t$2",
+      "}"
+    ],
+    "description": "Standard for loop"
+  },
+  "Java Template": {
+    "prefix": ["cc", "java"],
+    "body": [
+      "import java.util.*;",
+      "class $TM_FILENAME_BASE {",
+      "\t\tpublic static void main(String[] args) {",
+      "\t\t\t$1",
+      "\t\t}",
+      "}"
+    ],
+  }
+}

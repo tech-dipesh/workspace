@@ -1,0 +1,106 @@
+{
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "export default function ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}() {",
+      "\treturn (",
+      "\t<div>",
+      "\t$1",
+      "\t</div>",
+      "\t);",
+      "}"
+    ],
+    "description": "React functional component"
+  },
+  "useState": {
+    "prefix": "us",
+    "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2);", "$3"],
+    "description": "useState hook"
+  },
+  "useEffect": {
+    "prefix": "uef",
+    "body": ["useEffect(() => {", "  $1", "}, [$2]);"],
+    "description": "useEffect hook"
+  },
+  "useEffect No Deps": {
+    "prefix": "uefm",
+    "body": ["useEffect(() => {", "  $1", "}, []);"],
+    "description": "useEffect on mount only"
+  },
+  "useRef": {
+    "prefix": "ur",
+    "body": "const $1 = useRef($2);",
+    "description": "useRef hook"
+  },
+  "useCallback": {
+    "prefix": "ucb",
+    "body": ["const $1 = useCallback(() => {", "  $2", "}, [$3]);"],
+    "description": "useCallback hook"
+  },
+  "useMemo": {
+    "prefix": "um",
+    "body": ["const $1 = useMemo(() => {", "  return $2;", "}, [$3]);"],
+    "description": "useMemo hook"
+  },
+  "Import React": {
+    "prefix": "imr",
+    "body": "import React from 'react';",
+    "description": "Import React"
+  },
+  "Import useState": {
+    "prefix": "imus",
+    "body": "import { useState } from 'react';",
+    "description": "Import useState"
+  },
+  "Import useEffect": {
+    "prefix": "imue",
+    "body": "import { useEffect } from 'react';",
+    "description": "Import useEffect"
+  },
+  "Async Arrow Function": {
+    "prefix": "arf",
+    "body": ["const $1 = async ($2) => {", "  $3", "};"],
+    "description": "Async arrow function"
+  },
+  "Map Array": {
+    "prefix": "mapl",
+    "body": [
+      "{$1.map(($2) => (",
+      "\t<div key={$2.id}>",
+      "\t$3",
+      "\t</div>",
+      "))}"
+    ],
+    "description": "JSX map"
+  },
+  "Fetch in useEffect": {
+    "prefix": "fetchef",
+    "body": [
+      "useEffect(() => {",
+      "\tconst fetchData = async () => {",
+      "\tconst response = await fetch('$1');",
+      "\tconst data = await response.json();",
+      "\t$2",
+      "\t};",
+      "\tfetchData();",
+      "}, []);"
+    ],
+    "description": "Fetch data in useEffect"
+  },
+  "Console Log": {
+    "prefix": ["cc", "clg"],
+    "body": "console.log($1);",
+    "description": "console.log"
+  },
+  "Try Catch": {
+    "prefix": "tc",
+    "body": [
+      "try {",
+      "  $1",
+      "} catch (error) {",
+      "  console.error(error);",
+      "}"
+    ],
+    "description": "Try catch"
+  }
+}

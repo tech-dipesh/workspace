@@ -1,0 +1,104 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-r": ["task::Spawn", { "task_name": "Compile and Run Java File" }]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "ctrl-r": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "ctrl-b": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-shift-w": "workspace::CloseWindow"
+    }
+  },
+  {
+    "unbind": {
+      "ctrl-shift-w": "workspace::CloseWindow"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "ctrl-shift-w": "pane::CloseAllItems"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w a": "pane::CloseAllItems"
+    }
+  },
+  // Ask a Skip Alert Message:
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-delete": ["project_panel::Delete", { "skip_prompt": true }]
+    }
+  },
+  // Run Java/cpp File:
+
+  {
+    "context": "Editor && extension == java",
+    "bindings": {
+      "ctrl-alt-n": [
+        "task::Spawn",
+        {
+          "task_name": "Compile and Run Java File"
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor && extension == cpp",
+    "bindings": {
+      "ctrl-alt-n": [
+        "task::Spawn",
+        {
+          "task_name": "Compile and Run C++ File"
+        }
+      ]
+    }
+  },
+  {
+      "context": "Editor",
+      "bindings": {
+        "ctrl-alt-r": "editor::Redo"
+      }
+    }
+]

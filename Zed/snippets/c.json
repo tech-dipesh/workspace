@@ -1,0 +1,182 @@
+{
+  "C++ Boilerplate": {
+    "prefix": "cc",
+    "body": [
+      "#include <iostream>",
+      "#include <vector>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "\t$1",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "C++ main boilerplate"
+  },
+  "All Library Import": {
+    "prefix": "ac",
+    "body": ["#include <bits/stdc++.h>", "using namespace std;", "$1"],
+    "description": "Include all libraries"
+  },
+  "Cout": {
+    "prefix": "oc",
+    "body": "cout << $1 << endl;",
+    "description": "cout print"
+  },
+  "Cin": {
+    "prefix": "ic",
+    "body": "cin >> $1;",
+    "description": "cin input"
+  },
+  "For Loop": {
+    "prefix": "lc",
+    "body": ["for (int i = 0; i < $1; i++) {", "  $2", "}"],
+    "description": "For loop"
+  },
+  "Nested Loop": {
+    "prefix": "nc",
+    "body": [
+      "for (int i = 0; i < $1; i++) {",
+      "\tfor (int j = 0; j < $2; j++) {",
+      "\t\t$3",
+      "\t}",
+      "}"
+    ],
+    "description": "Nested for loop"
+  },
+  "Random Array": {
+    "prefix": "rc",
+    "body": [
+      "vector<int> arr = {2, 9, 10, 1, 29, 30, 18, 50, 5, 21, 25, 30, 14, 35};",
+      "int n = arr.size();",
+      "$1"
+    ],
+    "description": "Random array vector"
+  },
+  "Array Size": {
+    "prefix": "sc",
+    "body": ["int n = sizeof(arr) / sizeof(arr[0]);", "$1"],
+    "description": "Size of array"
+  },
+  "2D Array": {
+    "prefix": "2rc",
+    "body": [
+      "int arr[4][4] = {",
+      "\t{22, 19, 10, 1},",
+      "\t{29, 30, 18, 50},",
+      "\t{5, 21, 25, 30},",
+      "\t{14, 35, 17, 20}",
+      "};",
+      "int row = sizeof(arr) / sizeof(arr[0]);",
+      "int col = sizeof(arr[0]) / sizeof(arr[0][0]);",
+      "$1"
+    ],
+    "description": "2D array"
+  },
+  "Unordered Map": {
+    "prefix": "um",
+    "body": ["unordered_map<$1, $2> mp;", "$3"],
+    "description": "Unordered map"
+  },
+  "Vector Init": {
+    "prefix": "vt",
+    "body": "vector<$1> $2;",
+    "description": "Vector initialization"
+  },
+  "Sort Vector": {
+    "prefix": "sortv",
+    "body": ["sort($1.begin(), $1.end());", "$2"],
+    "description": "Sort vector"
+  },
+  "Sort Array": {
+    "prefix": "sorta",
+    "body": ["sort(arr, arr + n);", "$1"],
+    "description": "Sort array"
+  },
+  "Linked List Template": {
+    "prefix": "llt",
+    "body": [
+      "#include <iostream>",
+      "#include <vector>",
+      "using namespace std;",
+      "",
+      "class Node {",
+      "public:",
+      "\tint data;",
+      "\tNode* next;",
+      "\tNode(int value) : data(value), next(nullptr) {}",
+      "\tNode(int value, Node* nxt) : data(value), next(nxt) {}",
+      "};",
+      "",
+      "Node* convertArrayToLL(vector<int> arr) {",
+      "\tNode* head = new Node(arr[0]);",
+      "\tNode* temp = head;",
+      "\tfor (int i = 1; i < arr.size(); i++) {",
+      "\t\tNode* node = new Node(arr[i]);",
+      "\t\ttemp->next = node;",
+      "\t\ttemp = node;",
+      "\t}",
+      "\treturn head;",
+      "}",
+      "",
+      "void Display(Node* head) {",
+      "\tNode* temp = head;",
+      "\twhile (temp) {",
+      "\tcout << temp->data << \" \";",
+      "\ttemp = temp->next;",
+      "\t}",
+      "\tcout << endl;",
+      "}",
+      "",
+      "int main() {",
+      "\tvector<int> arr = {2, 9, 10, 1, 29, 30, 18, 50};",
+      "\tNode* head = convertArrayToLL(arr);",
+      "\t$1",
+      "\tDisplay(head);",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "Linked list full template"
+  },
+  "LL Base Case": {
+    "prefix": "llb",
+    "body": [
+      "if (head == nullptr || head->next == nullptr) {",
+      "\treturn head;",
+      "}",
+      "Node* temp = head;"
+    ],
+    "description": "Linked list base case"
+  },
+  "Tree Template": {
+    "prefix": "tc",
+    "body": [
+      "#include <iostream>",
+      "using namespace std;",
+      "",
+      "class Node {",
+      "public:",
+      "\tint data;",
+      "\tNode* left;",
+      "\tNode* right;",
+      "\tNode(int value) : data(value), left(nullptr), right(nullptr) {}",
+      "};",
+      "",
+      "int main() {",
+      "\tNode* root = new Node(1);",
+      "\troot->left = new Node(2);",
+      "\troot->right = new Node(13);",
+      "\troot->left->left = new Node(9);",
+      "\troot->left->right = new Node(5);",
+      "\t$1",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "Binary tree template"
+  },
+  "Endl": {
+    "prefix": "ec",
+    "body": "cout << endl;",
+    "description": "cout endl"
+  }
+}

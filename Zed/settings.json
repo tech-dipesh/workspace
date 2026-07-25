@@ -1,0 +1,85 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
+  "cli_default_open_behavior": "existing_window",
+  "terminal": {
+    "shell": {
+      "program": "C:\\\\Program Files\\\\Git\\\\bin\\\\bash.exe",
+    },
+    
+  },
+  "disable_ai": true,
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "vim_mode": true,
+  "base_keymap": "VSCode",
+  "relative_line_numbers": "enabled",
+  "vim": {
+    "toggle_relative_line_numbers": true
+  },
+  "status_bar": {
+    "experimental.show": false,
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+  "file_types": {
+    "javascript": ["*.js"],
+  },
+  "show_edit_predictions": false,
+  "soft_wrap": "editor_width",
+  "tab_size": 2,
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+   
+  // HIde The Sign In Page 
+  "title_bar": {
+    "show_sign_in": false
+  },
+
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false,  // Set to false to hide quick action buttons
+    "selections_menu": false, // Set to false to hide the selection dropdown button
+    "agent_review": false,    // Set to false to hide AI agent review buttons
+    "code_actions": false     // Set to false to hide the code action lightbulb button
+  },
+}
