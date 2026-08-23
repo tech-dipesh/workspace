@@ -7,29 +7,43 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "lsp": {
-    "vtsls": {
-      "settings": {
-        "typescript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
-        },
-        "javascript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always"
+  "git_panel": {
+    "dock": "left"
+  },
+  "search": {
+    "button": false
+  },
+  "auto_update_extensions": {
+    "java": false
+  },
+"lsp": {
+      "jdtls": {
+        "settings": {
+          "java_home": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.11.10-hotspot",
+          "initialization_options": {
+            "settings": {
+              "java": {
+                "configuration": {
+                  "runtimes": [
+                    {
+                      "name": "JavaSE-21",
+                      "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.11.10-hotspot",
+                      "default": true
+                    }
+                  ]
+                }
+              }
+            }
           }
         }
-      },
-      "enable_lsp_tasks": true
-    }
-  },
+      }
+    },
   "cli_default_open_behavior": "existing_window",
   "terminal": {
     "shell": {
       "program": "C:\\\\Program Files\\\\Git\\\\bin\\\\bash.exe",
     },
-    
+
   },
   "disable_ai": true,
   "session": {
@@ -42,7 +56,7 @@
     "toggle_relative_line_numbers": true
   },
   "status_bar": {
-    "experimental.show": false,
+    "experimental.show": true,
   },
   "tab_bar": {
     "show_tab_bar_buttons": false,
@@ -57,6 +71,8 @@
   },
   "file_types": {
     "javascript": ["*.js"],
+    // Make ejs as a support type:
+    "HTML": ["ejs"]
   },
   "show_edit_predictions": false,
   "soft_wrap": "editor_width",
@@ -69,8 +85,8 @@
     "light": "One Light",
     "dark": "One Dark",
   },
-   
-  // HIde The Sign In Page 
+
+  // HIde The Sign In Page
   "title_bar": {
     "show_sign_in": false
   },
@@ -82,4 +98,12 @@
     "agent_review": false,    // Set to false to hide AI agent review buttons
     "code_actions": false     // Set to false to hide the code action lightbulb button
   },
+  "project_panel": {
+    "button": false,
+    "show_diagnostics": "all",
+    "git_status_indicator": true
+  },
+
+  // HIde a Tab Header Label Terminal:
+  "terminal.tabs.visible": false
 }

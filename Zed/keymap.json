@@ -100,5 +100,84 @@
       "bindings": {
         "ctrl-alt-r": "editor::Redo"
       }
+    },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-p": "git::ReviewDiff"
     }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-g r": "git::ReviewDiff"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "ctrl-g ctrl-d": "git::Diff"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "unbind": {
+      "ctrl-g d": "git::Diff"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-g": "git::ViewUncommittedChanges"
+    }
+  },
+  // For the Collapse Expan
+  {
+     "context": "Workspace",
+     "bindings": {
+       "alt-shift-x": "project_panel::CollapseAllEntries"
+     }
+   },
+   {
+     "context": "ProjectPanel && not_editing",
+     "bindings": {
+       "alt-shift-x": "project_panel::ExpandAllEntries"
+     }
+   },
+   {
+     "bindings": {
+       "f2": "terminal::RenameTerminal"
+     }
+   },
+   // For Rename Terminal:
+   {
+   "context": "ProjectPanel",
+   "bindings": {
+     "f2": "project_panel::Rename"
+   }
+   },
+
+   {
+     "context": "Editor && vim_mode == normal",
+     "bindings": {
+       "f2": [
+         "workspace::ToggleExpandItem",
+         "project_panel::Rename"
+       ]
+     }
+   },
+
+   // Keyword Shortcut:
+    {
+       "context": "Workspace",
+       "bindings": {
+         "ctrl-shift-e": "pane::RevealInProjectPanel"
+       }
+     },
+     {
+       "context": "ProjectPanel && not_editing",
+       "bindings": {
+         "ctrl-shift-e": "workspace::ToggleRightDock"
+       }
+     }
+
 ]

@@ -20,12 +20,12 @@
   },
   "Cout": {
     "prefix": "oc",
-    "body": "cout << $1 << endl;",
+    "body": "std::cout << $1 <<\"\\n\";",
     "description": "cout print"
   },
   "Cin": {
     "prefix": "ic",
-    "body": "cin >> $1;",
+    "body": "std::cin >> $1;",
     "description": "cin input"
   },
   "For Loop": {
@@ -150,7 +150,35 @@
   },
   "Endl": {
     "prefix": "ec",
-    "body": "cout << endl;",
+    "body": "cout << \"\\n\";",
     "description": "cout endl"
+  },
+  "Codeforces": {
+    "prefix": "codef",
+    "body":  [
+      "#include <iostream>",
+      "#include <vector>",
+      "#include <algorithm>",
+      "int main() {",
+      "\tstd::ios_base::sync_with_stdio(false);",
+      "\tstd::cin.tie(NULL);",
+      "\tint t;",
+      "\tstd::cin >> t;",
+      "\twhile (t--) {",
+      "\t\tint n;",
+      "\t\tstd::cin >> n;",
+      "\t\tstd::vector<int>vt(n);",
+      "\t\tfor (int i = 0; i < n; i++) {",
+      "\t\t\t\tstd::cin>>vt[i];",
+      "\t\t}",
+      "\t\t$1",
+      "\t\tfor (int i = 0; i < n; i++) {",
+      "\t\t\t\t$2",
+      "\t\t}",
+      "\t}",
+      "\treturn 0;",
+      "}"
+    ]  
+
   }
 }
